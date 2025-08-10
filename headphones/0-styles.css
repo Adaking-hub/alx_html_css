@@ -1,0 +1,172 @@
+body {
+    font-family: 'Source-Sans-Pro', 'Spin-Cycle-OT', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+.hero_page{
+    /*max-width: 1000px;*/
+    background-image: url(assets/images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.logo a {
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 0;
+    margin-left: 10px;}
+
+.logo img {
+    width: auto;
+    height: 30px;
+    display: block;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links {
+    flex: 1;
+}
+
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    gap: 20px;
+}
+
+.nav-links ul li {
+    /* margin: 0 5px; */
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+.nav-links ul li a:hover,
+.nav-links ul li a:active {
+    color: #FF6565
+}
+
+
+button:hover,
+button:active {
+    opacity: 0.9
+
+}
+
+.hero_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    height: 100%;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+.hero_content h3 {
+    font-weight: bold;
+}
+.hero_content p {
+    font-size: 15px;
+}
+
+.hero_content  button {
+    background-color: #FF6565;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    margin: 50px 0;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero_content button:hover {
+    background-color: #e05252;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 480px) {
+.nav-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10; /* keep it above logo if overlapping */
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-basis: 100%;
+        background: #000; /* background for dropdown */
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+}
